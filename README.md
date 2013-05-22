@@ -13,4 +13,8 @@ This is a Test project using the deprecated [Google Images Ajax API](https://dev
 
 * I could hace implemented caches myself. In that case, I would probably have used a LRUCache caching bitmaps for memory. writing to that cache could be done in bg, always synchronizing the calls. Reading should happen in the Adapter and UI thread. For disk cache, I could store the images in the External Drive, and read them in a bg thread.
 
+* Note on Fragments: A better implementation would be to have the GridView in a Fragment, so that orientation changes wouldn't destroy it, and it could be used in other views/devices. I didn't implement Fragments just for simplicity. 
+
+* In ImageAdapter, I didn't use XML layouts to create my views for simplicity. They are simply ImageView's, and even though it is good practice to have design separeted from the logic, it is also known that inflating XML layouts is expensive and in an adapter, you want to be as fast as possible.
+
 
