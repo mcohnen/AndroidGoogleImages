@@ -17,4 +17,6 @@ This is a Test project using the deprecated [Google Images Ajax API](https://dev
 
 * In ImageAdapter, I didn't use XML layouts to create my views for simplicity. They are simply ImageView's, and even though it is good practice to have design separeted from the logic, it is also known that inflating XML layouts is expensive and in an adapter, you want to be as fast as possible.
 
+* I specified minLevel 11, because I use addAll method in ArrayAdapter. It could easily change down to 8, and implement that simple method my own. I did not put too much attention to API level details.
+
 
